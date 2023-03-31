@@ -32,7 +32,7 @@ MYPASSWORD=your_password
         <pre><code>http://localhost:8080/send-email</code></pre>
       </li>
       <li>Here's an example of how you can use the endpoint to send an  email via a form. This example is made with React and TypeScript. 
-      <pre><code>```JSX
+      <pre><code>```jsx
       const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     let name = state.name;
@@ -50,7 +50,8 @@ MYPASSWORD=your_password
         alert('Message sent!');
       })
       .catch(() => alert('Message failed to send!'));
-  };```</pre></code>
+  };
+  ```</pre></code>
       </li>
     </ol>
     <h2>Contributing</h2>
