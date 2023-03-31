@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Node.js Email Server App</title>
-  </head>
   <body>
     <h1>Node.js Email Server App</h1>
     <p>This is a Node.js-based email server application that allows users to send and receive emails using a simple web interface. The app is built using the <a href="https://expressjs.com/">Express</a> web framework and <a href="https://nodemailer.com/about/">Nodemailer</a> email client library.</p>
@@ -32,7 +29,27 @@ MYPASSWORD=your_password
     <h2>Usage</h2>
     <ol>
       <li>This is the endpoint you'll be using for sending emails:
-        <pre><code>http://localhost:80807send-email</code></pre>
+        <pre><code>http://localhost:8080/send-email</code></pre>
+      </li>
+      <li>Here's an example of how you can use the endpoint to send an  email via a form. This example is made with React and TypeScript. 
+      <pre><code>const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    let name = state.name;
+    let senderEmail = state.email;
+    let subject = state.subject;
+    let message = state.message;
+    axios
+      .post('https://emailer.fly.dev/send-email', {
+        name,
+        senderEmail,
+        subject,
+        message,
+      })
+      .then(() => {
+        alert('Message sent!');
+      })
+      .catch(() => alert('Message failed to send!'));
+  };</pre></code>
       </li>
     </ol>
     <h2>Contributing</h2>
