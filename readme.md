@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" integrity="sha512-KFOzQ4O4N68TDGQlDUib6hG0f0+3JACgLjt+tKrX8ns0hU6+H0dRULx/lplg8nIJ7YHjEiJZ7VckTebI1zptfw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" integrity="sha512-Hjoj+D0ohZ8h4wQ4cddLVm5uzb1GGyB0vS5S5/5Hnk6/7Og8Rv6tnJf6NHNz6QfdyF8Xz3h/aTdbIDztBQ2dIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-jsx.min.js" integrity="sha512-+b0DdNl1BQ2+R/fAwwtF2DmOUpUPKVd0p5m+fszqJS+v5/KY73zjJtRMYZt1QZtMdRPbcWJg8rP5o5a3y5/+OA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
   <body>
     <h1>Node.js Email Server App</h1>
     <p>This is a Node.js-based email server application that allows users to send and receive emails using a simple web interface. The app is built using the <a href="https://expressjs.com/">Express</a> web framework and <a href="https://nodemailer.com/about/">Nodemailer</a> email client library.</p>
@@ -37,7 +32,8 @@ MYPASSWORD=your_password
         <pre><code>http://localhost:8080/send-email</code></pre>
       </li>
       <li>Here's an example of how you can use the endpoint to send an  email via a form. This example is made with React and TypeScript. 
-      <pre><code class="language-jsx">const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+      <pre><code>```JSX
+      const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     let name = state.name;
     let senderEmail = state.email;
@@ -54,7 +50,7 @@ MYPASSWORD=your_password
         alert('Message sent!');
       })
       .catch(() => alert('Message failed to send!'));
-  };</pre></code>
+  };```</pre></code>
       </li>
     </ol>
     <h2>Contributing</h2>
